@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  /* Variáveis de Cores */
+  --backgroundColor: #f6f6f6;
+  --colorPrimary: #725936;
+  --colorSecondary: #0b3c1c;
+  --colorTertiary: #8b9b4c;
+  --colorQuaternary: #fea000;
+  --colorBlack: #212121;
+  --h1-font-size: 2.5rem;
+
+  /* Variáveis para tamanho do texto */
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.2rem;
+  --h5-font-size: 1.2rem;
+  --h6-font-size: 1rem;
+  --p-font-size: 1rem;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: var(--colorBlack);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+.container_seletor-idioma {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  top: 20px;
+  right: -85%;
+  gap: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+  width: 180px;
+  border-radius: 24px;
+  cursor: pointer;
+  
+}
+
+.container_seletor-idioma:hover {
+  transition: transform 3s;
+  background-color: #ffffff7d;
+}
+
+.container_seletor-idioma select {
+  font-size: 1em;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: var(--cor-texto-white);
+  width: 138px;
+  transition: border-color 0.2s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.container_seletor-idioma option {
+  background-color: var(--color-fundo);
+  color: var(--cor-texto-black);
+}
+
+/* RESPONSIVIDADE DA SEÇÃO DE IDIOMA NO TOPO DO SITE */
+@media (max-width: 600px) {
+  .container_seletor-idioma {
+    position: static; /* Evita sobreposição em telas pequenas */
+    justify-content: center;
+    gap: 8px;
+    padding: 7px 8px;
+    border-radius: 0px;
+    width: 100%;
+  }
+
+  .container_seletor-idioma select {
+    width: 150px;
+    font-size: 0.95em;
+    padding: 4px 6px;
+  }
+}
+
+
+
+/* Estilo do Cabeçalho */
+header {
+  padding: 20px 0;
+  text-align: center;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: var(--h1-font-size);
+  color: var(--colorPrimary);
+  border-top: 3px solid var(--colorSecondary);
+  border-bottom: 3px solid var(--colorSecondary);
+}
+
+header p {
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+  background-color: white;
+  color: var(--colorBlack);
+  font-size: var(--p-font-size);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+  }
+  header h1 {
+    margin-top: 35px;
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    margin: 25px 0;
+  }
+
+  .atrativo {
+    flex: 1 1 100%;
+  }
+}
+
+/* Estilo do Main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.atrativo {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+  padding: 20px;
+  flex: 1 1 calc(33% - 20px);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  & h2 {
+    font-size: var(--h3-font-size);
+    color: var(--colorSecondary);
+  }
+
+  & ul {
+    padding: 0 20px;
+  }
+
+  & ul > li {
+    list-style: circle;
+    margin-bottom: 5px;
+    text-align: justify;
+  }
+
+  & ul > li > strong {
+    color: var(--colorTertiary);
+  }
+
+  & p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+/* ========================================================================= */
+/* IMAGEM DO FORTE DO PRESEPIO E BASÍLICA DE NAZARÉ */
+.image-card1 {
+  border-radius: 20px;
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+
+  background-image: url("../img/img-forte-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 16/9; /* usar para manter a proporção da imagem */
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+}
+.image-card1:hover {
+  background-image: url("../img/img-basilica-section-hover.jpg");
+}
+
+/* IMAGEM DO TACACÁ e AÇAÍ */
+.image-card2 {
+  border-radius: 20px;
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+
+  background-image: url("../img/img-tacaca-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 16/9; /* usar para manter a proporção da imagem */
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+}
+.image-card2:hover {
+  background-image: url("../img/img-acai-section-hover.jpg");
+}
+
+/* IMAGEM DO BOSQUE E MANGAL */
+.image-card3 {
+  border-radius: 20px;
+  box-shadow: 0 1px 6px 0 rgba(51, 51, 51, 0.16);
+
+  background-image: url("../img/img-mosqueiro-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 16/9; /* usar para manter a proporção da imagem */
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+}
+.image-card3:hover {
+  background-image: url("../img/img-mangal-section-hover.jpg");
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--colorSecondary);
+  color: var(--backgroundColor);
+  margin: 50px 0 0 0;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h3 {
+    font-size: var(--h4-font-size);
+    margin-bottom: 20px;
+  }
+
+  & p {
+    font-size: var(--p-font-size);
+    text-align: center;
+  }
+
+  & p > a {
+    color: var(--colorTertiary);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+span {
+  text-align: center;
+  width: 100%;
+  font-size: 0.95em;
+  word-break: break-word; /* quebra de linha em palavras longas */
+  a {
+    color: var(--colorTertiary);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
