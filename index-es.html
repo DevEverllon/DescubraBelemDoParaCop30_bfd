@@ -1,127 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descubre Belém, la puerta de la Amazonía</title>
-  <link rel="stylesheet" href="estilos.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f9f9f9;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descubre Belém, la puerta de la Amazonía</title>
 
-    #selector-idioma {
-      text-align: right;
-      margin-bottom: 20px;
-    }
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
 
-    select {
-      padding: 5px;
-      font-size: 1em;
-      border-radius: 5px;
-    }
+    <!-- Favicon -->
+      <link rel="icon" type="image/png" href="img/logo-favicon.png">
 
-    header {
-      margin-bottom: 30px;
-    }
+    <!-- CDN Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- 🌍 Selector de idioma -->
+    <div id="selector-idioma" class="container_seletor-idioma">
+      <select id="idioma" onchange="cambiarIdioma(this.value)">
+        <option value="index-es.html">🇪🇸 Español</option>
+        <option value="index.html">🇧🇷 Portugués</option>
+        <option value="index-en.html">🇺🇸 Inglés</option>
+        <option value="index-zh.html">🇨🇳 Chino</option>
+      </select>
+    </div>
 
-    .atraccion {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+    <!-- HEADER -->
+    <header class="container">
+      <h1>Descubre Belém, la puerta de la Amazonía</h1>
+      <p>
+        Belém es una de las ciudades más vibrantes de Brasil, donde se mezclan
+        historia, fe, sabores y naturaleza. Fundada en 1616 alrededor del Fuerte
+        del Pesebre, hoy encanta con la procesión del Círio de Nazaré, el
+        mercado Ver-o-Peso y la moderna Estación de los Almacenes.
+      </p>
+    </header>
 
-    .atraccion h2 {
-      color: #2c3e50;
-    }
+    <!-- ATRACCIONES TURÍSTICAS -->
+    <main class="container">
+      <!-- IMG 1 -->
+      <section class="image-card1">
+        <!-- imagem do forte do presépio aparecerá -->
+      </section>
 
-    .atraccion ul {
-      list-style: none;
-      padding-left: 0;
-    }
+      <!-- CARD 1 -->
+      <section class="atrativo">
+        <h2>Centro Histórico</h2>
+        <ul>
+          <li>
+            <strong>Fuerte del Pesebre:</strong> Lugar de fundación de la
+            ciudad, con vista a la Bahía de Guajará.
+          </li>
+          <li>
+            <strong>Ciudad Vieja:</strong> Calles adoquinadas, edificios
+            coloniales e iglesias centenarias.
+          </li>
+          <li>
+            <strong>Basílica de Nazaré:</strong> Escenario del mayor evento
+            religioso de Brasil: el Círio de Nazaré.
+          </li>
+        </ul>
+        <p>
+          Curiosidad: El Círio reúne a más de 2 millones de personas en una
+          caminata de fe por las calles de Belém.
+        </p>
+      </section>
 
-    .atraccion li {
-      margin-bottom: 8px;
-    }
+      <!-- CARD 2 -->
+      <section class="atrativo">
+        <h2>Gastronomía Paraense</h2>
+        <ul>
+          <li>
+            <strong>Mercado Ver-o-Peso:</strong> El mayor mercado al aire libre
+            de América Latina, con pescados, frutas y hierbas amazónicas.
+          </li>
+          <li>
+            <strong>Estación de los Almacenes:</strong> Antiguos depósitos
+            portuarios convertidos en centro gastronómico y cultural.
+          </li>
+          <li>
+            <strong>Platos típicos:</strong> Pato al tucupí, maniçoba, tacacá y
+            açaí puro con harina.
+          </li>
+        </ul>
+        <p>
+          Curiosidad: Las embarcaciones con açaí llegan al mercado antes del
+          amanecer, directamente desde los ríos de la selva.
+        </p>
+      </section>
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #eee;
-      border-top: 1px solid #ccc;
-    }
-  </style>
-</head>
-<body>
+      <!-- IMG 2  -->
+      <section class="image-card2">
+        <!-- imagem do tacacá aparecerá -->
+      </section>
 
-  <!-- 🌍 Selector de idioma -->
-  <div id="selector-idioma">
-    <label for="idioma"><strong>🌍 Idioma:</strong></label>
-    <select id="idioma" onchange="cambiarIdioma(this.value)">
-      <option value="index-es.html">🇪🇸 Español</option>
-      <option value="index.html">🇧🇷 Portugués</option>
-      <option value="index-en.html">🇺🇸 Inglés</option>
-      <option value="index-zh.html">🇨🇳 Chino</option>
-    </select>
-  </div>
+      <!-- CARD 3 -->
+      <section class="atrativo">
+        <h2>Naturaleza y Paseos</h2>
+        <ul>
+          <li>
+            <strong>Mangal de las Garzas:</strong> Parque ecológico con mirador,
+            mariposario y aves nativas.
+          </li>
+          <li>
+            <strong>Isla de Mosqueiro:</strong> Playas de agua dulce con olas y
+            ambiente de pueblo costero.
+          </li>
+          <li>
+            <strong>Bosque Rodrigues Alves:</strong> Un pedazo de la selva
+            amazónica en pleno centro urbano.
+          </li>
+        </ul>
+        <p>
+          Curiosidad: El Mangal alberga más de 300 garzas y ofrece espectáculos
+          de alimentación diarios.
+        </p>
+      </section>
 
-  <!-- HEADER -->
-  <header>
-    <h1>🌿 Descubre Belém, la puerta de la Amazonía</h1>
-    <p>
-      Belém es una de las ciudades más vibrantes de Brasil, donde se mezclan historia, fe, sabores y naturaleza.  
-      Fundada en 1616 alrededor del Fuerte del Pesebre, hoy encanta con la procesión del Círio de Nazaré, el mercado Ver-o-Peso y la moderna Estación de los Almacenes.
-    </p>
-  </header>
+      <!-- IMG 3 -->
+      <section class="image-card3">
+        <!-- imagem do mangal aparecerá -->
+      </section>
+    </main>
 
-  <!-- ATRACCIONES TURÍSTICAS -->
-  <section class="atraccion">
-    <h2>🏛️ Centro Histórico</h2>
-    <ul>
-      <li><strong>Fuerte del Pesebre:</strong> Lugar de fundación de la ciudad, con vista a la Bahía de Guajará.</li>
-      <li><strong>Ciudad Vieja:</strong> Calles adoquinadas, edificios coloniales e iglesias centenarias.</li>
-      <li><strong>Basílica de Nazaré:</strong> Escenario del mayor evento religioso de Brasil: el Círio de Nazaré.</li>
-    </ul>
-    <p>Curiosidad: El Círio reúne a más de 2 millones de personas en una caminata de fe por las calles de Belém.</p>
-  </section>
+    <!-- FOOTER -->
+    <footer>
+      <h3>Proyecto desarrollado por estudiantes de la UEPA</h3>
+      
+      <p>
+        Ubicación:
+        <a href="https://www.google.com/maps?q=UEPA+Telegrafo" target="_blank"
+          >UEPA – Campus Telégrafo</a
+        >, Belém/PA
+      </p>
+      <p>
+        Contacto:
+        <a href="https://wa.me/5591999999999" target="_blank"
+          >+55 (91) 99999-9999</a
+        >
+      </p>
+    </footer>
 
-  <section class="atraccion">
-    <h2>🍲 Gastronomía Paraense</h2>
-    <ul>
-      <li><strong>Mercado Ver-o-Peso:</strong> El mayor mercado al aire libre de América Latina, con pescados, frutas y hierbas amazónicas.</li>
-      <li><strong>Estación de los Almacenes:</strong> Antiguos depósitos portuarios convertidos en centro gastronómico y cultural.</li>
-      <li><strong>Platos típicos:</strong> Pato al tucupí, maniçoba, tacacá y açaí puro con harina.</li>
-    </ul>
-    <p>Curiosidad: Las embarcaciones con açaí llegan al mercado antes del amanecer, directamente desde los ríos de la selva.</p>
-  </section>
+    <span>
+      <p>
+        © 2025 Descubre Belém do Pará. Todos los derechos reservados - <strong>Desarrollado por <a href="https://github.com/deveverllon">Éverllon Souza</a></strong>
+      </p>
+    </span>
 
-  <section class="atraccion">
-    <h2>🌳 Naturaleza y Paseos</h2>
-    <ul>
-      <li><strong>Mangal de las Garzas:</strong> Parque ecológico con mirador, mariposario y aves nativas.</li>
-      <li><strong>Isla de Mosqueiro:</strong> Playas de agua dulce con olas y ambiente de pueblo costero.</li>
-      <li><strong>Bosque Rodrigues Alves:</strong> Un pedazo de la selva amazónica en pleno centro urbano.</li>
-    </ul>
-    <p>Curiosidad: El Mangal alberga más de 300 garzas y ofrece espectáculos de alimentación diarios.</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <h3>📍 Proyecto desarrollado por estudiantes de la UEPA</h3>
-    <p>Ubicación: <a href="https://www.google.com/maps?q=UEPA+Telegrafo" target="_blank">UEPA – Campus Telégrafo</a>, Belém/PA</p>
-    <p>📱 Contacto: <a href="https://wa.me/5591999999999" target="_blank">+55 (91) 99999-9999</a></p>
-  </footer>
-
-  <!-- JS: Cambio de idioma -->
-  <script>
-    function cambiarIdioma(pagina) {
-      window.location.href = pagina;
-    }
-  </script>
-
-</body>
+    <!-- JS: Cambio de idioma -->
+    <script>
+      function cambiarIdioma(pagina) {
+        window.location.href = pagina;
+      }
+    </script>
+  </body>
 </html>
